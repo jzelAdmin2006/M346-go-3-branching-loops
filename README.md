@@ -85,6 +85,7 @@ if grade == 6 {
 In diesem Fall ist ein `switch`/`case`-Konstrukt besser lesbar:
 
 ```go
+switch grade {
 case 6:
 	fmt.Println("very good")
 case 5:
