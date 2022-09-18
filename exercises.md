@@ -94,6 +94,10 @@ Konstanten) geht, und die Zählervariable gemäss den Spielregeln ausgibt:
 - durch 3 _und_ 5 teilbar: `"FizzBuzz"`
 - sonst: Zählervariable ausgeben
 
+Tipp: Die Teilbarkeit kann mit dem Modulo-Operator `%` geprüft werden. Lautet
+das Ergebnis einer Modulo-Operation 0, ist die Zahl durch den Divisor restlos
+teilbar (es gilt z.B. `15 % 3 == 0` und `3 % 2 == 1`).
+
 ### Zusatzaufgabe
 
 Falls Sie die Regeln mittels `if`/`else` umgesetzt haben, schreiben Sie diese
