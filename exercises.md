@@ -54,6 +54,8 @@ Es wurde bereits mit den ersten beiden Fällen begonnen. Dabei hat sich die
 Lösungsvariante mit `if`, `else if` und `else` als umständlich herausgestellt.
 Sie sollen den Code mittels `switch`/`case` umschreiben und vervollständigen.
 
+Überprüfen Sie Ihre Lösung anschliessend anhand der verlinkten Tabelle.
+
 ### Zusatzaufgabe
 
 Rufen Sie die Funktion `outputDateRange()` mit einem weiteren Zeichen (`rune`)
