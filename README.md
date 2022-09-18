@@ -1,4 +1,4 @@
-# Verzweigungen und Schleifen
+# Kontrollstrukturen: Verzweigungen und Schleifen
 
 Programme bestehen aus Daten und Logik. Im
 [ersten](https://code.frickelbude.ch/m346/go-1-vars-types-output) und
