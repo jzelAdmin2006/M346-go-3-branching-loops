@@ -322,5 +322,15 @@ for zipCode, town := range zipCodes {
 }
 ```
 
+Ausgabe:
+
+```
+8000 Zurich
+1200 Geneva
+3000 Bern
+6000 Lucerne
+7000 Chur
+```
+
 Wert und Schlüssel können gleichermassen (`zipCode := range zipCodes` bzw. `_,
 town := range zipCodes`) ignoriert werden, wenn sie nicht von Interesse sind.
