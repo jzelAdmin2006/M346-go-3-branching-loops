@@ -104,17 +104,18 @@ verwenden!
 
 `ex4/main.go`: Für viele Kartenspiele verwendet man ein Kartenset bestehend aus
 vier Farben (engl. _suits_) und neun Werten (engl. _ranks_). Die
-Deutschschweizer Jasskarten haben neun Werte von sechs bis neun ("nell"), sowie
-"Banner", "Under", "Ober", "König", "Ass" und die vier Farben "Eichel",
-"Schelle", "Schilte" und "Rose".
+[Deutschschweizer Jasskarten](https://jassverzeichnis.ch/deutsche-jasskarten/)
+haben neun Werte von sechs bis neun ("nell"), sowie "Banner", "Under", "Ober",
+"König", "Ass" und die vier Farben "Eichel", "Schelle", "Schilte" und "Rose".
 
-Die französischen Karten haben die Werte von sechs bis zehn, sowie "Bube" (engl.
-_jack_), "Dame" (engl. _queen_), König (engl. _king_) und Ass (engl. _ace_) und
-die vier Farben "Karo" (engl. _diamonds_), "Pik" (engl. _ppades_), "Kreuz"
-(engl. _clubs_) und "Herz (engl. _hearts_). Da der Unicode-Zeichensatz
-entsprechende Symbole definiert, sollen hier die französischen Karten verwendet
-werden ‒ beim Jassen halten Sie sich aber bitte weiterhin an die
-deutschschweizer Karten ;-)
+Die [Französischen Karten](https://jassverzeichnis.ch/das-sind-die-franzoesischen-jasskarten/)
+haben die Werte von sechs bis zehn, sowie "Bube" (engl.  _Jack_), "Dame" (engl.
+_Queen_), König (engl. _King_) und Ass (engl. _Ace_) und die vier Farben "Karo"
+(engl. _Diamonds_), "Pik" (engl. _Spades_), "Kreuz" (engl. _Clubs_) und "Herz
+(engl. _Hearts_). Da der Unicode-Zeichensatz entsprechende Symbole definiert,
+sollen hier die französischen Karten verwendet werden. (Am Stammtisch im Gasthof
+Rössli in Escholzmatt verwenden Sie aber beim Jassen gefälligst weiterhin an die
+Deutschschweizer Karten, sonst gibt es Ärger.)
 
 Die Farben (`suits`) und Werte (`ranks`) sind als zwei `rune`-Slices
 vordefiniert. Schreiben Sie eine Schleife, welche alle 36 Spielkarten in vier
