@@ -61,3 +61,41 @@ Sie sollen den Code mittels `switch`/`case` umschreiben und vervollständigen.
 Rufen Sie die Funktion `outputDateRange()` mit einem weiteren Zeichen (`rune`)
 auf, das _kein_ Tierkreiszeichen ist. Behandeln Sie diesen Fall mit einem
 `default`-Fall im zuvor geschriebenen `switch`/`case`-Konstrukt.
+
+## 3) FizzBuzz
+
+`ex3/main.go`: FizzBuzz ist ein Spiel, das in einer Runde von Leuten gespielt
+wird. Es beginnt bei der Zahl 1; und der Spieler an der Reihe spricht diese Zahl
+aus. Jeder weitere Spieler erhöht diese Zahl um 1 und spricht sie aus ‒ ausser
+wenn die Zahl durch 3 oder durch 5 restlos teilbar ist: Dann spricht er "Fizz"
+(durch 3 teilbar) bzw. "Buzz" (durch 5 teilbar) aus. Beispiel:
+
+1. 1
+2. 2
+3. Fizz
+4. 4
+5. Buzz
+6. Fizz
+7. 7
+8. 8
+9. Fizz
+10. Buzz
+11. 11
+
+usw.
+
+Ist eine Zahl durch 3 _und_ 5 teilbar, spricht man "FizzBuzz" aus.
+
+Schreiben Sie eine `for`-Schleife, die von `Lower` bis `Upper` (vordefinierte
+Konstanten) geht, und die Zählervariable gemäss den Spielregeln ausgibt:
+
+- durch 3 teilbar: `"Fizz"`
+- durch 5 teilbar: `"Buzz"`
+- durch 3 _und_ 5 teilbar: `"FizzBuzz"`
+- sonst: Zählervariable ausgeben
+
+### Zusatzaufgabe
+
+Falls Sie die Regeln mittels `if`/`else` umgesetzt haben, schreiben Sie diese
+per `switch`/`case` um. Möglicherweise können Sie hierzu `fallthrough`
+verwenden!
