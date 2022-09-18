@@ -7,7 +7,7 @@
 Die folgenden Aufgaben können Sie direkt in die angegebene Datei lösen. Beachten
 Sie hierzu die `// TODO: `-Kommentare im Code und die folgenden Instruktionen:
 
-## 1) Sternzeichen aus Geburtsdatum ermitteln
+## 1) Sternzeichen aus Geburtsdatum ermitteln (`if`/`else`)
 
 `ex1/main.go`: Die zwölf Tierkreiszeichen (Sternzeichen) werden für das
 Geburtsdatum innerhalb eines Datumsbereiches vergeben, z.B. Krebs für ein
@@ -42,7 +42,7 @@ die Sternzeichen korrekt ausgegeben werden. (Funktionsaufrufe schauen wir erst
 später an, Sie sollten aber die bestehenden Aufrufe einfach kopieren und
 anpassen können.)
 
-## 2) Datumsbereich aus Sternzeichen ermitteln
+## 2) Datumsbereich aus Sternzeichen ermitteln (`switch`/`case`)
 
 `ex2/main.go`: Dieses Programm soll die [Tabelle der
 Tierkreiszeichen](https://de.wikipedia.org/wiki/Tierkreiszeichen#Die_zw%C3%B6lf_Tierkreiszeichen_des_Zodiaks)
@@ -62,7 +62,7 @@ Rufen Sie die Funktion `outputDateRange()` mit einem weiteren Zeichen (`rune`)
 auf, das _kein_ Tierkreiszeichen ist. Behandeln Sie diesen Fall mit einem
 `default`-Fall im zuvor geschriebenen `switch`/`case`-Konstrukt.
 
-## 3) FizzBuzz
+## 3) FizzBuzz (`for`)
 
 `ex3/main.go`: FizzBuzz ist ein Spiel, das in einer Runde von Leuten gespielt
 wird. Es beginnt bei der Zahl 1; und der Spieler an der Reihe spricht diese Zahl
@@ -99,3 +99,39 @@ Konstanten) geht, und die Zählervariable gemäss den Spielregeln ausgibt:
 Falls Sie die Regeln mittels `if`/`else` umgesetzt haben, schreiben Sie diese
 per `switch`/`case` um. Möglicherweise können Sie hierzu `fallthrough`
 verwenden!
+
+## 4) Spielkarten (`for`/`range`)
+
+`ex4/main.go`: Für viele Kartenspiele verwendet man ein Kartenset bestehend aus
+vier Farben (engl. _suits_) und neun Werten (engl. _ranks_). Die
+Deutschschweizer Jasskarten haben neun Werte von sechs bis neun ("nell"), sowie
+"Banner", "Under", "Ober", "König", "Ass" und die vier Farben "Eichel",
+"Schelle", "Schilte" und "Rose".
+
+Die französischen Karten haben die Werte von sechs bis zehn, sowie "Bube" (engl.
+_jack_), "Dame" (engl. _queen_), König (engl. _king_) und Ass (engl. _ace_) und
+die vier Farben "Karo" (engl. _diamonds_), "Pik" (engl. _ppades_), "Kreuz"
+(engl. _clubs_) und "Herz (engl. _hearts_). Da der Unicode-Zeichensatz
+entsprechende Symbole definiert, sollen hier die französischen Karten verwendet
+werden ‒ beim Jassen halten Sie sich aber bitte weiterhin an die
+deutschschweizer Karten ;-)
+
+Die Farben (`suits`) und Werte (`ranks`) sind als zwei `rune`-Slices
+vordefiniert. Schreiben Sie eine Schleife, welche alle 36 Spielkarten in vier
+Spalten (eine Spalte pro Farbe, mittels Tabs `\t` getrennt) ausgibt. Die Ausgabe
+sollte etwa so aussehen:
+
+```
+◆⑥	♠⑥	♣⑥	♥⑥	
+◆⑦	♠⑦	♣⑦	♥⑦	
+◆⑧	♠⑧	♣⑧	♥⑧	
+◆⑨	♠⑨	♣⑨	♥⑨	
+◆⑩	♠⑩	♣⑩	♥⑩	
+◆J	♠J	♣J	♥J	
+◆Q	♠Q	♣Q	♥Q	
+◆K	♠K	♣K	♥K	
+◆A	♠A	♣A	♥A	
+```
+
+Tipp: Sie benötigen verschachtelte Schleifen mit `for` und `range` und die
+Funktion `fmt.Printf()`.
