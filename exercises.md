@@ -141,3 +141,5 @@ Funktion `fmt.Printf()`.
 
 Definieren Sie eine Map mit dem Namen `cards` und dem Typ `map[rune][]string`
 und legen Sie zu jeder Farbe die Liste der dazugehörigen neun Spielkarten ab.
+Wenn Sie die Funktion `fmt.Sprintf()` verwenden, können Sie viel vom bestehenden
+Code wiederverwenden.
