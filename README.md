@@ -158,10 +158,169 @@ die Werte `1`, `2` und `3` als nicht bestanden.
 
 ## Schleifen (_Loops_)
 
+Go kennt nur eine einzige Art der Schleife: `for`. Diese kann aber auf
+verschiedene Arten verwendet werden, um vergleichbare Konstrukte in anderen
+Sprachen (`while`, `foreach`) emulieren zu können.
+
 ### `for`
+
+Die `for`-Schleife folgt der Syntax:
+
+```
+for initializer; condition; end statement {
+	repeated block
+}
+```
+
+Beispielsweise:
+
+```go
+for i := 0; i < 10; i++ {
+	fmt.Printf("%d ", i)
+}
+fmt.Println()
+```
+
+Ausgabe:
+
+```
+0 1 2 3 4 5 6 7 8 9
+```
+
+Eine entsprechende `while`-Schleife liesse sich folgendermassen formulieren,
+wobei `initializer` und `end statement` entsprechend vor die Schleife oder in
+den Schleifenblock verschoben werden:
+
+```go
+j := 0
+for j < 10 {
+	fmt.Printf("%d ", j)
+	j++
+}
+fmt.Println()
+```
 
 #### `continue`
 
+Soll der Schleifenblock unterbrochen und die Ausführung bei der nächsten
+Iteration fortgesetzt werden, kann dies mit `continue` erreicht werden:
+
+```go
+for x := 0; x < 10; x++ {
+	if x%2 == 0 {
+		continue
+	}
+	fmt.Printf("%d ", x)
+}
+fmt.Println()
+```
+
+Ausgabe (nur ungerage Zahlen):
+
+```
+1 3 5 7 9
+```
+
 #### `break`
 
+Soll die Schleife (vorzeitig) beendet werden, kann hierzu `break` verwendet
+werden:
+
+```go
+sum, maxSum := 0, 15
+for y := 0; y < 10; y++ {
+	sum += y
+	fmt.Printf("%d", y)
+	if sum >= maxSum {
+		break
+	} else {
+		fmt.Print(" + ")
+	}
+}
+fmt.Println(" >=", maxSum)
+```
+
+Ausgabe:
+
+```
+0 + 1 + 2 + 3 + 4 + 5 >= 15
+```
+
 ### `range`
+
+Schleifen werden oftmals verwendet um über Slices zu iterieren:
+
+```go
+fibs := []int{1, 1, 2, 3, 5, 8}
+for i := 0; i < len(fibs); i++ {
+	value := fibs[i]
+	fmt.Printf("%d: %d\n", i, value)
+}
+```
+
+Hier wird die Indexvariable `i` verwendet, um die Indizes von 0 bis zur Länge
+(exklusiv) des Slices `fibs` hochzuzählen. Mithilfe der Indexvariable wird der
+Wert ermittelt; anschliessend werden Index und Wert zusammen ausgegeben:
+
+```
+0: 1
+1: 1
+2: 2
+3: 3
+4: 5
+5: 8
+```
+
+Solche Konstrukte werden sehr häufig gebraucht und können darum mit `range`
+abgekürzt werden:
+
+```go
+for i, value := range fibs {
+	fmt.Printf("%d: %d\n", i, value)
+}
+```
+
+Mit `range` werden Index und Wert _paarweise_ zurückgegeben. Man kann aber den
+Wert auch ignorieren und nur den Index (`i`) zuweisen:
+
+```go
+for i := range fibs {
+	value := fibs[i]
+	fmt.Printf("%d: %d\n", i, value)
+}
+```
+
+Ist der Index nicht von Interesse, kann man ihm der Pseudo-Variablen `_`
+zuweisen, um ihn zu ignorieren:
+
+```go
+for _, value := range fibs {
+	fmt.Printf("%d ", value)
+}
+fmt.Println()
+```
+
+Ausgabe:
+
+```
+1 1 2 3 5 8
+```
+
+Bei einer `map`, wo die Indizes beliebig sind, erfolgt die Iteration ebenfalls
+mittels `range`:
+
+```go
+zipCodes := map[int]string{
+	1200: "Geneva",
+	3000: "Bern",
+	6000: "Lucerne",
+	7000: "Chur",
+	8000: "Zurich",
+}
+for zipCode, town := range zipCodes {
+	fmt.Printf("%d %s\n", zipCode, town)
+}
+```
+
+Wert und Schlüssel können gleichermassen (`zipCode := range zipCodes` bzw. `_,
+town := range zipCodes`) ignoriert werden, wenn sie nicht von Interesse sind.
