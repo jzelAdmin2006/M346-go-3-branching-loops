@@ -135,3 +135,8 @@ sollte etwa so aussehen:
 
 Tipp: Sie benötigen verschachtelte Schleifen mit `for` und `range` und die
 Funktion `fmt.Printf()`.
+
+### Zusatzaufgabe
+
+Definieren Sie eine Map mit dem Namen `cards` und dem Typ `map[rune][]string`
+und legen Sie zu jeder Farbe die Liste der dazugehörigen neun Spielkarten ab.
