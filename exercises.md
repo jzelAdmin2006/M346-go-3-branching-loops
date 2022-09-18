@@ -7,7 +7,7 @@
 Die folgenden Aufgaben können Sie direkt in die angegebene Datei lösen. Beachten
 Sie hierzu die `// TODO: `-Kommentare im Code und die folgenden Instruktionen:
 
-## 1) Sternzeichen
+## 1) Sternzeichen aus Geburtsdatum ermitteln
 
 `ex1/main.go`: Die zwölf Tierkreiszeichen (Sternzeichen) werden für das
 Geburtsdatum innerhalb eines Datumsbereiches vergeben, z.B. Krebs für ein
@@ -41,3 +41,21 @@ deren Geburtsdatum und Sternzeichen Sie kennen. Rufen Sie die Funktion
 die Sternzeichen korrekt ausgegeben werden. (Funktionsaufrufe schauen wir erst
 später an, Sie sollten aber die bestehenden Aufrufe einfach kopieren und
 anpassen können.)
+
+## 2) Datumsbereich aus Sternzeichen ermitteln
+
+`ex2/main.go`: Dieses Programm soll die [Tabelle der
+Tierkreiszeichen](https://de.wikipedia.org/wiki/Tierkreiszeichen#Die_zw%C3%B6lf_Tierkreiszeichen_des_Zodiaks)
+ausgeben. Die Funktion `outputDateRange()` nimmt eine `rune` namens `zodiacSign`
+entgegen. Zu diesem Sternzeichen sollen Sie den dazugehörigen Datumsbereich
+ausgeben, z.B. `"21.03. - 20.04."` für das Sternzeichen Widder (_Aries_).
+
+Es wurde bereits mit den ersten beiden Fällen begonnen. Dabei hat sich die
+Lösungsvariante mit `if`, `else if` und `else` als umständlich herausgestellt.
+Sie sollen den Code mittels `switch`/`case` umschreiben und vervollständigen.
+
+### Zusatzaufgabe
+
+Rufen Sie die Funktion `outputDateRange()` mit einem weiteren Zeichen (`rune`)
+auf, das _kein_ Tierkreiszeichen ist. Behandeln Sie diesen Fall mit einem
+`default`-Fall im zuvor geschriebenen `switch`/`case`-Konstrukt.
