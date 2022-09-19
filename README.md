@@ -21,8 +21,9 @@ Programmiersprachen, jedoch gibt es auch einige wichtige Unterschiede.
 
 ### `if`/`else`
 
-Ein bedingter Codeblock kann mit `if` umgesetzt werden, wobei die Bedingung
-_nicht_ in Klammern stehen muss:
+Ein bedingter Codeblock kann mit `if`
+([Spec](https://go.dev/ref/spec#If_statements)) umgesetzt werden, wobei die
+Bedingung _nicht_ in Klammern stehen muss:
 
 ```go
 maxPoints := 100.0
@@ -82,7 +83,8 @@ if grade == 6 {
 }
 ```
 
-In diesem Fall ist ein `switch`/`case`-Konstrukt besser lesbar:
+In diesem Fall ist ein `switch`/`case`-Konstrukt
+([Spec](https://go.dev/ref/spec#Switch_statements)) besser lesbar:
 
 ```go
 switch grade {
@@ -133,7 +135,8 @@ default:
 #### `fallthrough`
 
 Soll nach zutreffender Bedingung nicht nur der aktuelle Block ausgeführt werden,
-sondern auch der nächste Block, kann dies mit `fallthrough` erreicht werden:
+sondern auch der nächste Block, kann dies mit `fallthrough`
+([Spec](https://go.dev/ref/spec#Fallthrough_statements)) erreicht werden:
 
 ```go
 switch grade {
@@ -159,7 +162,8 @@ die Werte `1`, `2` und `3` als nicht bestanden.
 
 ## Schleifen (_Loops_)
 
-Go kennt nur eine einzige Art der Schleife: `for`. Diese kann aber auf
+Go kennt nur eine einzige Art der Schleife: `for`
+([Spec](https://go.dev/ref/spec#For_statements)). Diese kann aber auf
 verschiedene Arten verwendet werden, um vergleichbare Konstrukte in anderen
 Sprachen (`while`, `foreach`) emulieren zu können.
 
@@ -204,7 +208,8 @@ fmt.Println()
 #### `continue`
 
 Soll der Schleifenblock unterbrochen und die Ausführung bei der nächsten
-Iteration fortgesetzt werden, kann dies mit `continue` erreicht werden:
+Iteration fortgesetzt werden, kann dies mit `continue`
+([Spec](https://go.dev/ref/spec#Continue_statements)) erreicht werden:
 
 ```go
 for x := 0; x < 10; x++ {
@@ -224,8 +229,8 @@ Ausgabe (nur ungerage Zahlen):
 
 #### `break`
 
-Soll die Schleife (vorzeitig) beendet werden, kann hierzu `break` verwendet
-werden:
+Soll die Schleife (vorzeitig) beendet werden, kann hierzu `break`
+([Spec](https://go.dev/ref/spec#Break_statements)) verwendet werden:
 
 ```go
 sum, maxSum := 0, 15
