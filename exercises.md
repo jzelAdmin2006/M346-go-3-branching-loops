@@ -21,6 +21,8 @@ Bestimmen Sie das Sternzeichen mithilfe von `if` und `else` anhand des
 Geburtsdatum der Person (genauer: `p.Day` und `p.Month`). Die Sternzeichen sind
 oben bereits als Konstanten vordefiniert.
 
+Tipp: Sie benötigen die [logischen Operatoren](https://go.dev/ref/spec#Logical_operators).
+
 Starten Sie das Programm mit `go run ex1/main.go` und überprüfen Sie, ob die
 korrekten Sternzeichen ausgegeben werden. Die Ausgabe sollte folgendermassen
 aussehen:
