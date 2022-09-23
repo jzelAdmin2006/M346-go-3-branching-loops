@@ -70,10 +70,16 @@ func main() {
 	rick := Person{FullName{"Rick", "Astley"}, BirthDate{6, 2, 1966}}
 	edsger := Person{FullName{"Edsger", "Dijkstra"}, BirthDate{11, 5, 1930}}
 	alan := Person{FullName{"Alan", "Turing"}, BirthDate{23, 6, 1912}}
+	elon := Person{FullName{"Elon", "Musk"}, BirthDate{28, 6, 1971}}
+	trump := Person{FullName{"Donald", "Trump"}, BirthDate{14, 6, 1946}}
+	misterZuckerberg := Person{FullName{"Mark", "Zuckerberg"}, BirthDate{14, 5, 1984}}
 
 	outputWithZodiacSign(grace)
 	outputWithZodiacSign(dennis)
 	outputWithZodiacSign(rick)
 	outputWithZodiacSign(edsger)
 	outputWithZodiacSign(alan)
+	outputWithZodiacSign(elon)
+	outputWithZodiacSign(trump)
+	outputWithZodiacSign(misterZuckerberg)
 }
