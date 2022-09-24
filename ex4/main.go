@@ -23,9 +23,18 @@ func main() {
 	suits := []rune{Diamonds, Spades, Clubs, Hearts}
 	ranks := []rune{Six, Seven, Eight, Nine, Ten, Jack, Queen, King, Ace}
 
-	for _, rank := range ranks {
-		for _, suit := range suits {
-			fmt.Printf("%c%c\t", rank, suit)
+	var cards map[rune][]string = make(map[rune][]string)
+	for _, suit := range suits {
+		var ranksOfSuit []string = make([]string, 9)
+		for i, rank := range ranks {
+			ranksOfSuit[i] = fmt.Sprintf("%c%c", rank, suit)
+		}
+		cards[suit] = ranksOfSuit
+	}
+
+	for _, suit := range suits {
+		for _, rank := range cards[suit] {
+			fmt.Print(rank + "\t")
 		}
 		fmt.Println()
 	}
