@@ -15,6 +15,7 @@ const (
 	Capricornus = '\u2651' // Steinbock
 	Aquarius    = '\u2652' // Wassermann
 	Pisces      = '\u2653' // Fische
+	Tilde       = '~'
 )
 
 func outputDateRange(zodiacSign rune) {
@@ -45,7 +46,7 @@ func outputDateRange(zodiacSign rune) {
 	case Pisces:
 		fmt.Println("19.02. - 20.03")
 	default:
-		fmt.Println("")
+		fmt.Println("This is not a zodiac sign!")
 	}
 }
 
@@ -53,4 +54,5 @@ func main() {
 	for zodiacSign := Aries; zodiacSign <= Pisces; zodiacSign++ {
 		outputDateRange(zodiacSign)
 	}
+	outputDateRange(Tilde)
 }
