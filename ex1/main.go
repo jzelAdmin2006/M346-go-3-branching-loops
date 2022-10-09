@@ -19,27 +19,27 @@ const (
 
 func outputWithZodiacSign(p Person) {
 	var zodiacSign rune
-	if (p.BirthDate.Month == 3 && p.BirthDate.Day >= 21) || (p.BirthDate.Month == 4 && p.BirthDate.Day <= 20) {
+	if (p.Month == 3 && p.Day >= 21) || (p.Month == 4 && p.Day <= 20) {
 		zodiacSign = Aries
-	} else if (p.BirthDate.Month == 4 && p.BirthDate.Day >= 21) || (p.BirthDate.Month == 5 && p.BirthDate.Day <= 21) {
+	} else if (p.Month == 4 && p.Day >= 21) || (p.Month == 5 && p.Day <= 21) {
 		zodiacSign = Taurus
-	} else if (p.BirthDate.Month == 5 && p.BirthDate.Day >= 22) || (p.BirthDate.Month == 6 && p.BirthDate.Day <= 21) {
+	} else if (p.Month == 5 && p.Day >= 22) || (p.Month == 6 && p.Day <= 21) {
 		zodiacSign = Gemini
-	} else if (p.BirthDate.Month == 6 && p.BirthDate.Day >= 22) || (p.BirthDate.Month == 7 && p.BirthDate.Day <= 22) {
+	} else if (p.Month == 6 && p.Day >= 22) || (p.Month == 7 && p.Day <= 22) {
 		zodiacSign = Cancer
-	} else if (p.BirthDate.Month == 7 && p.BirthDate.Day >= 23) || (p.BirthDate.Month == 8 && p.BirthDate.Day <= 22) {
+	} else if (p.Month == 7 && p.Day >= 23) || (p.Month == 8 && p.Day <= 22) {
 		zodiacSign = Leo
-	} else if (p.BirthDate.Month == 8 && p.BirthDate.Day >= 23) || (p.BirthDate.Month == 9 && p.BirthDate.Day <= 22) {
+	} else if (p.Month == 8 && p.Day >= 23) || (p.Month == 9 && p.Day <= 22) {
 		zodiacSign = Virgo
-	} else if (p.BirthDate.Month == 9 && p.BirthDate.Day >= 23) || (p.BirthDate.Month == 10 && p.BirthDate.Day <= 22) {
+	} else if (p.Month == 9 && p.Day >= 23) || (p.Month == 10 && p.Day <= 22) {
 		zodiacSign = Libra
-	} else if (p.BirthDate.Month == 10 && p.BirthDate.Day >= 23) || (p.BirthDate.Month == 11 && p.BirthDate.Day <= 22) {
+	} else if (p.Month == 10 && p.Day >= 23) || (p.Month == 11 && p.Day <= 22) {
 		zodiacSign = Scorpius
-	} else if (p.BirthDate.Month == 11 && p.BirthDate.Day >= 23) || (p.BirthDate.Month == 12 && p.BirthDate.Day <= 20) {
+	} else if (p.Month == 11 && p.Day >= 23) || (p.Month == 12 && p.Day <= 20) {
 		zodiacSign = Sagittarius
-	} else if (p.BirthDate.Month == 12 && p.BirthDate.Day >= 21) || (p.BirthDate.Month == 1 && p.BirthDate.Day <= 19) {
+	} else if (p.Month == 12 && p.Day >= 21) || (p.Month == 1 && p.Day <= 19) {
 		zodiacSign = Capricornus
-	} else if (p.BirthDate.Month == 1 && p.BirthDate.Day >= 20) || (p.BirthDate.Month == 2 && p.BirthDate.Day <= 18) {
+	} else if (p.Month == 1 && p.Day >= 20) || (p.Month == 2 && p.Day <= 18) {
 		zodiacSign = Aquarius
 	} else {
 		zodiacSign = Pisces
